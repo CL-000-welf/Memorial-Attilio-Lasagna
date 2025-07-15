@@ -12,8 +12,8 @@ document.getElementById("access-form").addEventListener("submit", (e) => {
     }
 
     CleengWebSdk.init({
-        publisherToken: publisherToken,
-        offerId: offerId,
+        publisherToken,
+        offerId,
         customerEmail: email,
         redirectUrl: "thankyou.html"
     });
