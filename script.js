@@ -1,12 +1,11 @@
-document.getElementById("buy-access-btn").addEventListener("click", () => {
-    const offerId = "E657284309_IT"; // Sostituisci con l'ID offerta reale su Cleeng
-    const publisherToken = "veTswRKnDveOGTZkoj72qcRUMvPn7Oa4H_Zlnc_fNpa5Bh9J";
 
-    // Simulazione email (in produzione, raccogli l’email utente con login)
-    const customerEmail = prompt("Inserisci la tua email per acquistare accesso:");
+document.getElementById("watch-live-btn").addEventListener("click", () => {
+    const offerId = "E657284309_IT";
+    const publisherToken = "veTswRKnDveOGTZkoj72qcRUMvPn7Oa4H_Zlnc_fNpa5Bh9J";
+    const customerEmail = prompt("Inserisci la tua email per continuare:");
 
     if (!customerEmail) {
-        alert("Email necessaria per procedere.");
+        alert("L'email è necessaria per procedere.");
         return;
     }
 
