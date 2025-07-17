@@ -1,54 +1,19 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Accesso alla Diretta</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Accesso Diretta Memorial Lasagna</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container" id="content">
-        <h1>Verifica accesso in corso...</h1>
+  <div class="container">
+    <h1>Benvenuto alla diretta!</h1>
+    <h2>XI Memorial Attilio Lasagna – Titolo Italiano Superwelter</h2>
+    <div class="video-container">
+      <iframe width="100%" height="500" src="https://www.youtube.com/embed/iqxV0zxO8mc?autoplay=1"
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+      </iframe>
     </div>
-
-    <script>
-        async function checkAccess() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const token = urlParams.get('token');
-            const offerId = "E657284309_IT";
-
-            if (!token) {
-                document.getElementById("content").innerHTML = "<h2>Accesso non autorizzato. Effettua l'acquisto per vedere la diretta.</h2>";
-                return;
-            }
-
-            const res = await fetch("https://api.cleeng.com/3.0/customer/entitlements", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ customerToken: token })
-            });
-
-            const data = await res.json();
-
-            const accessGranted = data.entitlements?.some(e => e.offerId === offerId);
-
-            if (accessGranted) {
-                document.getElementById("content").innerHTML = `
-                    <h1>Grazie per l'acquisto!</h1>
-                    <h2>Memorial Attilio Lasagna: Titolo Italiano Superwelter - Mohammed Graich vs Damiano Falcinelli</h2>
-                    <div class="video-container">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iqxV0zxO8mc?si=bU8s4nbtL9MD4_QM"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                `;
-            } else {
-                document.getElementById("content").innerHTML = "<h2>Non hai accesso a questo contenuto. Controlla l'acquisto o riprova.</h2>";
-            }
-        }
-
-        checkAccess();
-    </script>
+  </div>
 </body>
 </html>
