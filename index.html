@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titolo Italiano Superwelter</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.cleeng.com/js-components/latest/cleeng-components.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memorial Attilio Lasagna</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><img src="header.png" alt="Header" class="responsive-img"></header>
+  <img src="header.png" alt="Header Memorial Lasagna" class="header-img">
 
-    <main class="content">
-        <h1 class="main-title">Titolo Italiano Superwelter</h1>
-        <h2 class="fight-title">Mohammed Graich vs Damiano Falcinelli</h2>
-        <p class="event-info">Piazza Broletto, Mantova – 24 Luglio 2025, ore 21:00</p>
-        <p class="access-price">Accesso streaming: 6,50 €</p>
+  <div class="container">
+    <h1>XI Memorial Attilio Lasagna</h1>
+    <p><strong>LIVE STREAMING – 24 Luglio 2025</strong></p>
+    <p>Dalle 20:00 incontri dilettanti | Main event ore 21:00</p>
+    <p><strong>Mohammed Graich vs Damiano Falcinelli</strong></p>
+    <p>Titolo Italiano Superwelter</p>
+    <p class="access-price">Accesso streaming: 6,50 €</p>
 
-        <cleeng-checkout
-            offer-id="E742054483_IT"
-            lang="it"
-            theme="light"
-            success-url="thankyou.html">
-        </cleeng-checkout>
-    </main>
+    <button id="payWithPaypal" class="paypal-button">Acquista con PayPal</button>
+  </div>
 
-    <footer><img src="footer.png" alt="Footer" class="responsive-img"></footer>
+  <img src="footer.png" alt="Footer Memorial Lasagna" class="footer-img">
+
+  <script src="https://cdn.cleeng.com/web-sdk/4.0.0/cleeng-web-sdk.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
