@@ -38,3 +38,26 @@ h1, h2, h3, p {
   height: auto;
   display: block;
 }
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.match-title {
+  font-family: Impact, sans-serif;
+  font-size: 1.8em;
+  color: #f00;
+  display: block;
+  margin-top: 0.5em;
+}
